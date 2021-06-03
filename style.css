@@ -79,6 +79,9 @@ li {
     url(img/background.jpeg);
   background-size: cover;
   height: 500px;
+  position: relative;
+  z-index: 1;
+  right: -25px;
 }
 
 .weather:hover {
@@ -179,4 +182,12 @@ li {
   top: -10px;
   background-color: rgb(255, 254, 211);
   color: rgb(148, 100, 11);
+}
+
+@media only screen and (max-width: 1007px) {
+  /* For mobile phones: */
+  [class*="weather"] {
+    position: relative;
+    left: 0;
+  }
 }
