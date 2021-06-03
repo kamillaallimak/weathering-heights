@@ -11,7 +11,15 @@ function showTime(now) {
   }
 
   let dayIndex = now.getDay();
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
   let day = days[dayIndex];
   return `${day} kl.${hour}:${minutes}`;
 }

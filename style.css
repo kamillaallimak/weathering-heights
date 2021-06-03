@@ -8,11 +8,9 @@ li {
   margin: 10px;
 }
 
-/*
-.icons {
-  filter: grayscale(100%);
+.icon {
+  margin: 60px 0 0 40px;
 }
-*/
 
 .container {
   margin: 50px;
@@ -21,6 +19,7 @@ li {
 /* left Weather box*/
 .location {
   font-size: 35px;
+  font-weight: 600;
   text-transform: capitalize;
   position: relative;
   color: white;
@@ -30,28 +29,27 @@ li {
 .date-time,
 .description {
   font-size: 25px;
+  font-weight: 400;
   color: white;
   position: relative;
   left: 70px;
-  margin-bottom: 20px;
 }
 
 .humidity-wind {
   font-size: 18px;
   color: white;
   position: relative;
-  left: 30px;
+  left: 65px;
 }
 
 .current-temp {
-  font-size: 50px;
+  font-size: 80px;
   font-weight: 600;
   border: transparent;
   background: transparent;
-  margin: 10px;
   position: relative;
-  left: 60px;
-  top: 15px;
+  left: 0px;
+  top: 50px;
   color: white;
 }
 
@@ -60,7 +58,7 @@ li {
   font-weight: 400;
   color: white;
   position: relative;
-  top: -19px;
+  top: -40px;
   left: -5px;
   text-decoration: none;
 }
@@ -80,8 +78,7 @@ li {
     ),
     url(img/background.jpeg);
   background-size: cover;
-  min-height: 430px;
-  max-height: 700px;
+  height: 500px;
 }
 
 .weather:hover {
@@ -93,8 +90,7 @@ li {
 .info {
   border-radius: 30px;
   background: rgba(34, 41, 49);
-  min-height: 300px;
-  width: auto;
+  height: 450px;
 }
 
 .wrapper {
@@ -110,31 +106,32 @@ li {
 }
 
 .day-1 {
-  width: auto;
-  min-width: 50px;
-  min-height: 70px;
   background: white;
   border-radius: 10px;
   margin: 30px 0;
   color: #373d46;
+  height: 130px;
+  margin-left: 50px;
 }
 
 .day-2,
 .day-3 {
-  width: auto;
-  min-width: 40px;
-  min-height: 60px;
   background: #373d46;
   color: white;
+  height: 120px;
 }
 
 .day-4 {
-  width: auto;
-  min-width: 40px;
-  min-height: 60px;
   background: #373d46;
   border-radius: 0 10px 10px 0;
   color: white;
+  height: 120px;
+  margin-right: 50px;
+}
+
+.hover:hover {
+  transform: scale(1.1);
+  border-radius: 10px;
 }
 
 /* search current/new position*/
@@ -151,6 +148,7 @@ li {
   color: white;
   position: relative;
   left: -20px;
+  top: -40px;
 }
 
 #current-btn {
@@ -160,7 +158,6 @@ li {
   color: white;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
   border: transparent;
-  margin-top: 20px;
 }
 
 .search-btn:hover {
@@ -181,6 +178,7 @@ li {
   width: 60%;
   position: relative;
   left: 20px;
+  top: -40px;
   background-color: rgb(243, 236, 245);
   color: rgb(25, 1, 90);
 }
