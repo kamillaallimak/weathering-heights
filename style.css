@@ -8,10 +8,6 @@ li {
   margin: 10px;
 }
 
-.icon {
-  margin: 60px 0 0 40px;
-}
-
 .container {
   margin: 50px;
 }
@@ -42,6 +38,10 @@ li {
   left: 65px;
 }
 
+.icon {
+  margin: 150px 0 0 40px;
+}
+
 .current-temp {
   font-size: 80px;
   font-weight: 600;
@@ -49,7 +49,7 @@ li {
   background: transparent;
   position: relative;
   left: 0px;
-  top: 50px;
+  top: 130px;
   color: white;
 }
 
@@ -148,13 +148,13 @@ li {
   color: white;
   position: relative;
   left: -20px;
-  top: -40px;
+  top: -10px;
 }
 
 #current-btn {
   padding: 5px 20px;
   border-radius: 20px;
-  background: linear-gradient(45deg, rgba(247, 92, 2), rgba(255, 242, 0));
+  background: linear-gradient(45deg, rgba(247, 92, 2), rgb(255, 217, 0));
   color: white;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
   border: transparent;
@@ -167,9 +167,7 @@ li {
 }
 
 #current-btn:hover {
-  background: rgb(255, 208, 0);
-  color: rgba(34, 41, 49);
-  transition: all 300ms ease-in-out;
+  background: linear-gradient(45deg, rgba(247, 92, 2), rgb(255, 157, 0));
 }
 
 .search-input {
@@ -178,7 +176,7 @@ li {
   width: 60%;
   position: relative;
   left: 20px;
-  top: -40px;
-  background-color: rgb(243, 236, 245);
-  color: rgb(25, 1, 90);
+  top: -10px;
+  background-color: rgb(255, 254, 211);
+  color: rgb(148, 100, 11);
 }
