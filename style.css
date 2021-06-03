@@ -190,4 +190,35 @@ li {
     position: relative;
     left: 0;
   }
+  [class*="current-temp"] {
+    font-size: 50px;
+  }
+
+  [class*="unit"] {
+    font-size: 20px;
+    top: -25px;
+  }
+
+  [class*="location"] {
+    font-size: 25px;
+  }
+
+  [class*="date-time"] {
+    font-size: 20px;
+    left: 60px;
+  }
+
+  [class*="description"] {
+    font-size: 20px;
+    left: 60px;
+  }
+
+  [class*="humidity-wind"] {
+    font-size: 16px;
+    left: 30px;
+  }
+
+  [class*="icon"] {
+    margin: 150px 0 0 20px;
+  }
 }
