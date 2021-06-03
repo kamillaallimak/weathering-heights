@@ -1,4 +1,18 @@
 /* container */
+li {
+  list-style: none;
+}
+
+.ul {
+  padding: 10px;
+  margin: 10px;
+}
+
+/*
+.icons {
+  filter: grayscale(100%);
+}
+*/
 
 .container {
   margin: 50px;
@@ -61,13 +75,13 @@
   background: rgb(95, 107, 202); /* back-up if image doesn't work in browser*/
   background-image: linear-gradient(
       45deg,
-      rgba(137, 235, 238, 0.85),
-      rgba(95, 107, 202, 0.85)
+      rgba(255, 242, 0, 0.8),
+      rgba(247, 92, 2, 0.8)
     ),
     url(img/background.jpeg);
   background-size: cover;
-  min-height: 400px;
-  max-height: 500px;
+  min-height: 430px;
+  max-height: 700px;
 }
 
 .weather:hover {
@@ -75,25 +89,52 @@
   transition: all 300ms ease-in-out;
 }
 
-.weather-icon {
-  font-size: 100px;
-  color: white;
-  position: relative;
-  right: -60px;
-  padding-top: 100px;
-}
-
 /* right Info box*/
 .info {
   border-radius: 30px;
   background: rgba(34, 41, 49);
   min-height: 300px;
-  max-height: 400px;
+  width: auto;
 }
 
 .wrapper {
   position: relative;
   top: 30px;
+}
+
+/* weather for next coming days */
+.flexbox-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.day-1 {
+  width: auto;
+  min-width: 50px;
+  min-height: 70px;
+  background: white;
+  border-radius: 10px;
+  margin: 30px 0;
+  color: #373d46;
+}
+
+.day-2,
+.day-3 {
+  width: auto;
+  min-width: 40px;
+  min-height: 60px;
+  background: #373d46;
+  color: white;
+}
+
+.day-4 {
+  width: auto;
+  min-width: 40px;
+  min-height: 60px;
+  background: #373d46;
+  border-radius: 0 10px 10px 0;
+  color: white;
 }
 
 /* search current/new position*/
@@ -105,7 +146,7 @@
 .search-btn {
   padding: 10px 15px;
   border-radius: 50px;
-  background: rgba(95, 107, 202);
+  background: rgb(223, 84, 4);
   border: transparent;
   color: white;
   position: relative;
@@ -115,11 +156,7 @@
 #current-btn {
   padding: 5px 20px;
   border-radius: 20px;
-  background: linear-gradient(
-    45deg,
-    rgba(137, 235, 238, 0.85),
-    rgba(95, 107, 202, 0.85)
-  );
+  background: linear-gradient(45deg, rgba(247, 92, 2), rgba(255, 242, 0));
   color: white;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
   border: transparent;
@@ -127,15 +164,15 @@
 }
 
 .search-btn:hover {
-  background: rgb(137, 235, 238);
+  background: rgb(255, 208, 0);
   color: rgba(34, 41, 49);
-  transition: all 200ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
 #current-btn:hover {
-  background: rgba(95, 107, 202, 0.85);
-  color: whitesmoke;
-  transition: all 200ms ease-in-out;
+  background: rgb(255, 208, 0);
+  color: rgba(34, 41, 49);
+  transition: all 300ms ease-in-out;
 }
 
 .search-input {

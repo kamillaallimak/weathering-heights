@@ -27,7 +27,7 @@
             <span id="location"></span>
           </div> <!--location-->
           <div class="date-time" id="date-time"></div>
-          <i class="fas fa-cloud-sun weather-icon"></i>
+          <img src="" alt="" id="icon" class="icons"> 
              <div class="current-temp">
                 <span id="currentTemp"></span>
                 <a class="unit" id="celsius">°C</a>
@@ -35,6 +35,7 @@
                 <a class="unit" id="farenheit">°F</a>
             </div> <!--current temp-->
             <div class="description">Sunny</div>
+      
         </div> <!--col weather-->
         
         <div class="col-lg-4 col-sm-7 col-7 info">
@@ -43,6 +44,44 @@
             <div>Humidity:  <span id="humidity"></span>%</div>
             <div>Wind:  <span id="windspeed"></span> km/h</div>
           </div>
+         <div class="flexbox-container">
+           <div class="day-1">
+             <ul class="ul">
+               <li>
+                 <img src="" alt="icon" id="icon-1" class="icons">
+                </li>
+               <li id="day-1-weekday">Fri</li>
+               <li id="day-1-temp">20C</li>
+             </ul>
+           </div>
+           <div class="day-2">
+             <ul class="ul">
+               <li>
+                 <img src="" alt="icon" id="icon-2" class="icons">
+                </li>
+               <li id="day-2-weekday">Fri</li>
+               <li id="day-2-temp">16C</li>
+             </ul>
+           </div>
+           <div class="day-3">
+              <ul class="ul">
+               <li>
+                 <img src="" alt="icon" id="icon-3" class="icons">
+                </li>
+               <li id="day-3-weekday">Fri</li>
+               <li id="day-3-temp">12C</li>
+             </ul>            
+            </div>
+           <div class="day-4">
+             <ul class="ul">
+               <li>
+                 <img src="" alt="icon" id="icon-4" class="icons">
+                </li>
+               <li id="day-4-weekday">Fri</li>
+               <li id="day-4-temp">10C</li>
+             </ul>             
+           </div>
+         </div>
           <div class="search-block">
           <form id="form">
             <input
@@ -66,7 +105,6 @@
             </div>
             </div>  
         </div> <!--col info-->
-
       </div> <!--row-->
     </div> <!--container-->
     <script src="script.js"></script>
