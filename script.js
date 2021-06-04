@@ -1,27 +1,47 @@
 //-----------------------------------------------  Return Current Day and Time  ------------------------------------------//
-function showTime(now) {
-  console.log(now);
-  let hour = now.getHours();
+function showTime(timestamp) {
+  console.log(timestamp);
+  let date = new Date(timestamp);
+  console.log(date);
+  let hour = date.getHours();
   if (hour < 10) {
     hour = `0${hour}`;
   }
-  let minutes = now.getMinutes();
+  let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
 
-  let dayIndex = now.getDay();
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+  let dayIndex = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   let day = days[dayIndex];
-  return `${day} kl.${hour}:${minutes}`;
+  return `${day} ${hour}:${minutes}`;
+}
+
+function showDate(timestamp) {
+  console.log(timestamp);
+  let date = new Date(timestamp);
+  console.log(date);
+
+  let numberDate = date.getDate();
+  let monthIndex = date.getMonth();
+  let months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  let month = months[monthIndex];
+  let year = date.getFullYear();
+  return `${numberDate} ${month} ${year}`;
 }
 
 //-----------------------------------------------  Unit conversion for Current Temperature ------------------------------------------//
@@ -68,12 +88,21 @@ function showWeather(position) {
   document.querySelector("#windspeed").innerHTML = Math.round(
     position.data.wind.speed
   );
+  document.querySelector("#description").innerHTML =
+    position.data.weather[0].description;
+
   document
     .querySelector("#icon")
     .setAttribute(
       "src",
       `http://openweathermap.org/img/wn/${position.data.weather[0].icon}@2x.png`
     );
+
+  let date = document.querySelector("#date");
+  date.innerHTML = showDate(position.data.dt * 1000);
+
+  let time = document.querySelector("#time");
+  time.innerHTML = showTime(position.data.dt * 1000);
 }
 
 //Search for the city weather conditions using the weather API
@@ -111,10 +140,6 @@ function getCurrentPosition(event) {
 }
 
 //------------------------------------------------------------------------------------------------------------------------//
-
-let now = new Date();
-let dateTime = document.querySelector("#date-time");
-dateTime.innerHTML = showTime(now);
 
 let searchBtn = document.querySelector("#form");
 searchBtn.addEventListener("submit", getSearchCity);

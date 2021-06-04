@@ -16,19 +16,39 @@ li {
 .location {
   font-size: 35px;
   font-weight: 600;
-  text-transform: capitalize;
+
   position: relative;
   color: white;
   padding: 30px 0 0 30px;
 }
 
-.date-time,
-.description {
-  font-size: 25px;
-  font-weight: 400;
+.date {
+  font-size: 20px;
+  font-weight: 300;
   color: white;
   position: relative;
-  left: 70px;
+  left: 50px;
+}
+
+.description {
+  font-size: 20px;
+  font-weight: 300;
+  color: white;
+  position: relative;
+  left: 50px;
+}
+
+.description::first-letter {
+  text-transform: capitalize;
+}
+
+.time {
+  font-size: 10px;
+  font-weight: 400;
+  color: #373d46;
+  position: relative;
+  text-align: center;
+  top: 15px;
 }
 
 .humidity-wind {
@@ -70,7 +90,12 @@ li {
 
 .weather {
   border-radius: 30px;
-  background: rgb(95, 107, 202); /* back-up if image doesn't work in browser*/
+  background: rgb(
+    247,
+    92,
+    2,
+    0.8
+  ); /* back-up if image doesn't work in browser*/
   background-image: linear-gradient(
       45deg,
       rgba(255, 242, 0, 0.8),
