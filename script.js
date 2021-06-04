@@ -1,8 +1,6 @@
 //-----------------------------------------------  Return Current Day and Time  ------------------------------------------//
 function showTime(timestamp) {
-  console.log(timestamp);
   let date = new Date(timestamp);
-  console.log(date);
   let hour = date.getHours();
   if (hour < 10) {
     hour = `0${hour}`;
@@ -19,10 +17,7 @@ function showTime(timestamp) {
 }
 
 function showDate(timestamp) {
-  console.log(timestamp);
   let date = new Date(timestamp);
-  console.log(date);
-
   let numberDate = date.getDate();
   let monthIndex = date.getMonth();
   let months = [
@@ -45,39 +40,34 @@ function showDate(timestamp) {
 }
 
 //-----------------------------------------------  Unit conversion for Current Temperature ------------------------------------------//
-function convertToFarenheit() {
-  let temp = document.querySelector("#currentTemp");
-  let tempF = Math.round(temp.innerHTML * 1.8 + 32);
-  temp.innerHTML = `${tempF}`;
-}
+/*function standardUnits() {
+  alert("Standard Celsius");
+  let units = "metric";
+  return units;
+}*/
 
-function convertToCelsius() {
-  let temp = document.querySelector("#currentTemp");
-  let tempC = Math.round((5 / 9) * (temp.innerHTML - 32));
-  temp.innerHTML = `${tempC}`;
-}
-
-function switchToFarenheit() {
-  convertToFarenheit();
-  let tempUnit = celsiusLink;
-  tempUnit.innerHTML = `°F`;
-  let otherTempUnit = farenheitLink;
-  otherTempUnit.innerHTML = `°C`;
-}
-
-function switchToCelsius() {
-  convertToCelsius();
-  let tempUnit = farenheitLink;
-  tempUnit.innerHTML = `°F`;
-  let otherTempUnit = celsiusLink;
-  otherTempUnit.innerHTML = `°C`;
+function selectUnit(e) {
+  if (e.target.id === "farenheit") {
+    alert("Farenheit");
+  } else if (e.target.id === "celsius") {
+    alert("Celsius");
+  }
+  /* if (e.target.id === "farenheit") {
+    alert("Farenheit");
+    let units = "imperial";
+    return units;
+  } else if (e.target.id === "celsius") {
+    alert("Celsius");
+    units = "metric";
+    return units;
+  } else {
+    let units = standardUnits();
+  } */
 }
 
 //-----------------------------------------------  Weather for Search Result ------------------------------------------//
 //Get the weather data (for the city or the current lat/long coordinates provided by the API in the previous step)
 function showWeather(position) {
-  console.log(position);
-  console.log(position.data.weather[0].icon);
   document.querySelector("#location").innerHTML = position.data.name;
   document.querySelector("#currentTemp").innerHTML = Math.round(
     position.data.main.temp
@@ -105,12 +95,12 @@ function showWeather(position) {
   time.innerHTML = showTime(position.data.dt * 1000);
 }
 
+//-----------------------------------------------  Weather - Serach City Input ------------------------------------------//
 //Search for the city weather conditions using the weather API
 function handleSearchCity(city) {
-  let apiKey = "95aa18dfa2d4f8bc875941518d00ae49";
   let units = "metric";
+  let apiKey = "95aa18dfa2d4f8bc875941518d00ae49";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
-  console.log(apiUrl);
   axios.get(apiUrl).then(showWeather);
 }
 
@@ -121,15 +111,12 @@ function getSearchCity(event) {
   handleSearchCity(city);
 }
 
-//-----------------------------------------------  Weather for Current Position ------------------------------------------//
+//-----------------------------------------------  Weather -  Current Position Input ------------------------------------------//
 function handleCurrentPosition(position) {
-  console.log(position);
-  let lat = position.coords.latitude;
-  console.log(lat);
-  let long = position.coords.longitude;
-  console.log(long);
-  let apiKey = "95aa18dfa2d4f8bc875941518d00ae49";
   let units = "metric";
+  let lat = position.coords.latitude;
+  let long = position.coords.longitude;
+  let apiKey = "95aa18dfa2d4f8bc875941518d00ae49";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showWeather);
 }
@@ -148,9 +135,9 @@ let currentBtn = document.querySelector("#current-btn");
 currentBtn.addEventListener("click", getCurrentPosition);
 
 let farenheitLink = document.querySelector("#farenheit");
-farenheitLink.addEventListener("click", switchToFarenheit);
+farenheitLink.addEventListener("click", (e) => selectUnit(e));
 
 let celsiusLink = document.querySelector("#celsius");
-celsiusLink.addEventListener("click", switchToCelsius);
+celsiusLink.addEventListener("click", (e) => selectUnit(e));
 
 handleSearchCity("Stockholm");
