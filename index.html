@@ -21,7 +21,7 @@
     <div class="container">
       <div class="row align-items-center justify-content-center">
 
-        <div class="col-lg-4 col-sm-7 col-7 weather">
+        <div class="col-lg-5 col-md-6 col-sm-8 col-8 weather">
           <div class="location" >
             <i class="fas fa-map-marker-alt"></i> 
             <span id="location"></span>
@@ -31,41 +31,43 @@
           <img src="" alt="" id="icon" class="icon"> 
              <span class="current-temp">
                 <span id="currentTemp"></span>
-                <a class="unit celsius" id="celsius">°C</a>
-                <span class="unit">|</span>
-                <a class="unit farenheit" id="farenheit">°F</a>
+                <span class="unit">
+                <a  id="celsius">°C</a>
+                <span>|</span>
+                <a class="inactive" id="farenheit">°F</a>
+                </span>
              </span> <!--current temp-->
             
             
       
         </div> <!--col weather-->
         
-        <div class="col-lg-4 col-sm-7 col-7 info">
+        <div class="col-lg-4 col-md-5 col-sm-7 col-7 info">
           <div class="wrapper">
           <div class="humidity-wind">
-            <div><strong>HUMIDITY </strong> <span class="humidity" > <span id="humidity"></span>%</span></div>
+            <div><strong>HUMIDITY </strong> <span class="humidity" > <span id="humidity"></span> %</span></div>
             <div><strong>WIND </strong>    <span class="wind"><span  id="windspeed"></span> m/s</span></div>
           </div>
          <div class="flexbox-container">
-           <div class="day-1 hover">
+           <div class="day-1 box-a">
              <ul class="ul">
                <li id="day-1-weekday">Fri</li>
                <li id="day-1-temp">20C</li>
              </ul>
            </div>
-           <div class="day-2 hover">
+           <div class="day-2 box-b">
              <ul class="ul">
                <li id="day-2-weekday">Fri</li>
                <li id="day-2-temp">16C</li>
              </ul>
            </div>
-           <div class="day-3 hover">
+           <div class="day-3 box-b">
               <ul class="ul">
                <li id="day-3-weekday">Fri</li>
                <li id="day-3-temp">12C</li>
              </ul>            
             </div>
-           <div class="day-4 hover">
+           <div class="day-4 box-b">
              <ul class="ul">
                <li id="day-4-weekday">Fri</li>
                <li id="day-4-temp">10C</li>

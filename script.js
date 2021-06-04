@@ -52,9 +52,16 @@ function changeUnit(e) {
     let fTemp = (celsiusTemperature * 9) / 5 + 32;
     let temperatureElement = document.querySelector("#currentTemp");
     temperatureElement.innerHTML = Math.round(fTemp);
+    //DOM JS: classlist - "Remove the active-class the celsius degrees is using as a default, and add it to the Farenheit unit instead"
+    celsiusLink.classList.add("inactive");
+    farenheitLink.classList.remove("inactive");
+    farenheitLink.classList.add("active");
   } else if (e.target.id === "celsius") {
     let temperatureElement = document.querySelector("#currentTemp");
     temperatureElement.innerHTML = Math.round(celsiusTemperature);
+    celsiusLink.classList.remove("inactive");
+    celsiusLink.classList.add("active");
+    farenheitLink.classList.add("inactive");
   }
 }
 
