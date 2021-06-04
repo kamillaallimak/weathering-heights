@@ -55,7 +55,21 @@ li {
   font-size: 18px;
   color: white;
   position: relative;
-  left: 65px;
+  left: 90px;
+}
+
+.humidity {
+  font-size: 18px;
+  color: rgba(247, 92, 2);
+  position: relative;
+  left: 80px;
+}
+
+.wind {
+  font-size: 18px;
+  color: rgba(247, 92, 2);
+  position: relative;
+  left: 115px;
 }
 
 .icon {
@@ -71,6 +85,16 @@ li {
   left: 0px;
   top: 130px;
   color: white;
+}
+
+.farenheit {
+  font-size: 25px;
+  font-weight: 400;
+  color: #373d46;
+  position: relative;
+  top: -40px;
+  left: -5px;
+  text-decoration: none;
 }
 
 .unit {
@@ -160,6 +184,8 @@ li {
 .hover:hover {
   transform: scale(1.1);
   border-radius: 10px;
+  background: white;
+  color: #373d46;
 }
 
 /* search current/new position*/
