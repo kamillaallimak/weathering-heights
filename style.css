@@ -12,7 +12,8 @@ li {
   margin: 50px;
 }
 
-.time {
+.time,
+.github {
   font-size: 10px;
   font-weight: 400;
   color: #373d46;
@@ -164,7 +165,6 @@ li {
 
 .wind {
   font-size: 18px;
-  font-weight: 200;
   color: white;
   position: relative;
   left: 115px;
