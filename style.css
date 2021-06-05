@@ -180,25 +180,27 @@ li {
 .day-1 {
   background: rgb(245, 244, 244);
   border-radius: 10px;
-  margin: 30px 0;
   color: #373d46;
-  height: 130px;
-  margin-left: 50px;
+  margin: 40px 0 0 0;
+  position: relative;
+  left: 6px;
+  text-align: center;
 }
 
 .day-2,
 .day-3 {
   background: #373d46;
   color: white;
-  height: 120px;
+  margin: 40px 0 0 0;
+  text-align: center;
 }
 
 .day-4 {
   background: #373d46;
   border-radius: 0 10px 10px 0;
   color: white;
-  height: 120px;
-  margin-right: 50px;
+  margin: 40px 0 0 0;
+  text-align: center;
 }
 
 .box-a:hover {
@@ -209,6 +211,19 @@ li {
   border-radius: 10px;
   background: white;
   color: #373d46;
+}
+
+.icons {
+  width: 40px;
+}
+
+.max-temp {
+  font-weight: 800;
+}
+
+.min-temp {
+  font-weight: 400;
+  color: grey;
 }
 
 /* ------ Search new location  ------*/
@@ -224,8 +239,7 @@ li {
   border: transparent;
   color: white;
   position: relative;
-  left: -20px;
-  top: -10px;
+  margin-top: 20px;
 }
 
 .search-btn:hover {
@@ -240,7 +254,7 @@ li {
   width: 60%;
   position: relative;
   left: 20px;
-  top: -10px;
+  margin-top: 20px;
   background-color: rgb(245, 244, 244);
   color: #373d46;
 }
@@ -258,6 +272,7 @@ li {
   color: white;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
   border: transparent;
+  margin-top: 30px;
 }
 
 #current-btn:hover {
