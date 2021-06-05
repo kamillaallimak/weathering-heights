@@ -53,6 +53,7 @@ function changeUnit(e) {
     let temperatureElement = document.querySelector("#currentTemp");
     temperatureElement.innerHTML = Math.round(fTemp);
     //DOM JS: classlist - "Remove the active-class the celsius degrees is using as a default, and add it to the Farenheit unit instead"
+    celsiusLink.classList.remove("active");
     celsiusLink.classList.add("inactive");
     farenheitLink.classList.remove("inactive");
     farenheitLink.classList.add("active");
@@ -62,6 +63,7 @@ function changeUnit(e) {
     celsiusLink.classList.remove("inactive");
     celsiusLink.classList.add("active");
     farenheitLink.classList.add("inactive");
+    farenheitLink.classList.remove("active");
   }
 }
 
