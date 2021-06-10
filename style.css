@@ -179,7 +179,7 @@ li {
   margin-top: 40px;
 }
 
-.day-1 {
+.day-first {
   background: rgb(245, 244, 244);
   border-radius: 10px;
   color: #373d46;
@@ -187,13 +187,12 @@ li {
   left: 6px;
 }
 
-.day-2,
-.day-3 {
+.day-middle {
   background: #373d46;
   color: white;
 }
 
-.day-4 {
+.day-last {
   background: #373d46;
   border-radius: 0 10px 10px 0;
   color: white;

@@ -134,38 +134,47 @@ function getCurrentPosition(event) {
 //-------------------------------------------- Display Weather forecast for the 4 coming days ---------------------------------------------------------//
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = "";
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+  let firstDay = days.shift();
+  console.log(firstDay);
+  let lastDay = days.pop();
+  console.log(lastDay);
+  console.log(days);
+  let forecastFirst = `
+  <div class="day-first box-a">
+             <ul class="ul">
+               <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="next day weather icon" class="icons"> 
+               <li>${firstDay}</li>
+               <li > <span class="max-temp">20</span>° <span class="min-temp" ><span>15</span>°</span></li>
+             </ul>
+ </div>`;
 
-  forecastElement.innerHTML = `
-  <div class="day-1 box-a">
+  let forecastMiddle = "";
+  days.forEach(function (day) {
+    forecastMiddle =
+      forecastMiddle +
+      `
+  <div class="day-middle box-b">
              <ul class="ul">
-               <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="" id="icon-1" class="icons"> 
-               <li id="day-1-weekday">Fri</li>
-               <li > <span class="max-temp" id="day-1-temp-max">20</span>° <span class="min-temp" ><span id="day-1-temp-min">15</span>°</span></li>
+               <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="coming days weather icon" class="icons"> 
+               <li id="day-2-weekday">${day}</li>
+               <li > <span class="max-temp">21</span>° <span class="min-temp" ><span>16</span>°</span></li>
              </ul>
- </div>
-  <div class="day-2 box-b">
+</div>`;
+  });
+
+  let forecastLast = `
+   <div class="day-last box-b">
              <ul class="ul">
-               <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="" id="icon-1" class="icons"> 
-               <li id="day-2-weekday">Sat</li>
-               <li > <span class="max-temp" id="day-2-temp-max">21</span>° <span class="min-temp" ><span id="day-2-temp-min">16</span>°</span></li>
-             </ul>
-</div>
-<div class="day-3 box-b">
-              <ul class="ul">
-                <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="" id="icon-1" class="icons"> 
-               <li id="day-3-weekday">Sun</li>
-               <li > <span class="max-temp" id="day-3-temp-max">20</span>° <span class="min-temp" ><span id="day-3-temp-min">17</span>°</span></li>
-             </ul>            
-   </div>
-   <div class="day-4 box-b">
-             <ul class="ul">
-               <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="" id="icon-1" class="icons"> 
-               <li id="day-4-weekday">Mon</li>
-               <li > <span class="max-temp" id="day-4-temp-max">22</span>° <span class="min-temp" ><span id="day-3-temp-min">17</span>°</span></li>
+               <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="last day weather icon" class="icons"> 
+               <li>${lastDay}</li>
+               <li > <span class="max-temp">22</span>° <span class="min-temp" ><span>17</span>°</span></li>
              </ul>             
   </div>
-
            `;
+  forecastHTML = forecastFirst + forecastMiddle + forecastLast;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 let searchBtn = document.querySelector("#form");
