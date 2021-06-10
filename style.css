@@ -175,46 +175,42 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  margin-top: 40px;
 }
 
 .day-1 {
   background: rgb(245, 244, 244);
   border-radius: 10px;
   color: #373d46;
-  margin: 40px 0 0 0;
   position: relative;
   left: 6px;
-  text-align: center;
 }
 
 .day-2,
 .day-3 {
   background: #373d46;
   color: white;
-  margin: 40px 0 0 0;
-  text-align: center;
 }
 
 .day-4 {
   background: #373d46;
   border-radius: 0 10px 10px 0;
   color: white;
-  margin: 40px 0 0 0;
-  text-align: center;
 }
 
 .box-a:hover {
   transform: scale(1.1);
 }
 .box-b:hover {
-  transform: scale(1.18);
+  transform: scale(1.1);
   border-radius: 10px;
   background: white;
   color: #373d46;
 }
 
 .icons {
-  width: 40px;
+  width: 60px;
 }
 
 .max-temp {
@@ -310,9 +306,5 @@ li {
   [class*="humidity-wind"] {
     font-size: 16px;
     left: 30px;
-  }
-
-  [class*="icon"] {
-    margin: 150px 0 0 20px;
   }
 }
