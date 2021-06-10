@@ -180,7 +180,7 @@ li {
 }
 
 .day-first {
-  background: rgb(245, 244, 244);
+  background: rgb(187, 184, 184);
   border-radius: 10px;
   color: #373d46;
   position: relative;
@@ -188,12 +188,12 @@ li {
 }
 
 .day-middle {
-  background: #373d46;
+  background: #8a8c8d;
   color: white;
 }
 
 .day-last {
-  background: #373d46;
+  background: #8a8c8d;
   border-radius: 0 10px 10px 0;
   color: white;
 }
@@ -204,8 +204,8 @@ li {
 .box-b:hover {
   transform: scale(1.1);
   border-radius: 10px;
-  background: white;
-  color: #373d46;
+  background: rgb(216, 213, 213);
+  color: #5c6068;
 }
 
 .icons {
@@ -218,7 +218,7 @@ li {
 
 .min-temp {
   font-weight: 400;
-  color: grey;
+  color: #4b4d50;
 }
 
 /* ------ Search new location  ------*/

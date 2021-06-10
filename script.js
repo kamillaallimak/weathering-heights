@@ -152,6 +152,8 @@ function getCurrentPosition(event) {
 //-------------------------------------------- Display Weather forecast for the 4 coming days ---------------------------------------------------------//
 function displayForecast(forecastResponse) {
   let forecastData = forecastResponse.data.daily;
+  console.log(forecastData);
+  console.log(forecastData[0].weather[0].icon);
 
   let forecastElement = document.querySelector("#forecast");
 
@@ -160,7 +162,9 @@ function displayForecast(forecastResponse) {
   let forecastFirst = `
   <div class="day-first box-a">
              <ul class="ul">
-               <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="next day weather icon" class="icons"> 
+               <img src="http://openweathermap.org/img/wn/${
+                 forecastData[0].weather[0].icon
+               }@2x.png" alt="next day weather icon" class="icons"> 
                <li>${formatDay(forecastData[1].dt)}</li>
                <li > <span class="max-temp">${Math.round(
                  forecastData[1].temp.max
@@ -178,7 +182,9 @@ function displayForecast(forecastResponse) {
         `
         <div class="day-middle box-b">
                   <ul class="ul">
-                    <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="coming days weather icon" class="icons"> 
+                    <img src="http://openweathermap.org/img/wn/${
+                      day.weather[0].icon
+                    }@2x.png" alt="next day weather icon" class="icons"> 
                     <li>${formatDay(day.dt)}</li>
                     <li> <span class="max-temp">${Math.round(
                       day.temp.max
@@ -193,7 +199,9 @@ function displayForecast(forecastResponse) {
   let forecastLast = `
    <div class="day-last box-b">
              <ul class="ul">
-               <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="last day weather icon" class="icons"> 
+               <img src="http://openweathermap.org/img/wn/${
+                 forecastData[4].weather[0].icon
+               }@2x.png" alt="next day weather icon" class="icons"> 
                <li>${formatDay(forecastData[4].dt)}</li>
                <li > <span class="max-temp">${Math.round(
                  forecastData[4].temp.max
