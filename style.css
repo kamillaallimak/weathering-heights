@@ -180,7 +180,7 @@ li {
 }
 
 .day-first {
-  background: rgb(187, 184, 184);
+  background: rgb(202, 199, 199);
   border-radius: 10px;
   color: #373d46;
   position: relative;
@@ -188,12 +188,12 @@ li {
 }
 
 .day-middle {
-  background: #8a8c8d;
+  background: rgb(168, 166, 166);
   color: white;
 }
 
 .day-last {
-  background: #8a8c8d;
+  background: rgb(168, 166, 166);
   border-radius: 0 10px 10px 0;
   color: white;
 }
